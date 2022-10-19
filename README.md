@@ -30,6 +30,10 @@ Download images:
 make images
 ```
 
+To download more images, set the sample rate variable `FRAC`. Be sure to delete the contents of `data/images` beforehand.
+```
+make images FRAC=0.10
+```
 
 Project Organization
 ------------

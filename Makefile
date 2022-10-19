@@ -16,6 +16,8 @@ else
 HAS_CONDA=True
 endif
 
+FRAC ?= 0.01
+
 #################################################################################
 # COMMANDS                                                                      #
 #################################################################################
@@ -27,7 +29,7 @@ install: environment
 
 ## Make Dataset
 images: # requirements
-	$(PYTHON_INTERPRETER) src/data/download_images.py data/raw data/images
+	$(PYTHON_INTERPRETER) src/data/download_images.py data/raw data/images --frac $(FRAC)
 
 data: # requirements
 	$(PYTHON_INTERPRETER) src/data/make_dataset.py data/images data/processed

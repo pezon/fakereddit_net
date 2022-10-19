@@ -27,7 +27,7 @@ def main(
         cleaned data ready to be analyzed (saved in ../processed).
     """
     logger = logging.getLogger(__name__)
-    logger.info("making final data set from raw data")
+    logger.info(f"sampling data set from raw data at {frac * 100}% and downloading images")
     for file in Path(input_filepath).glob("*.tsv"):
         # sample and clean dataframe
         df = pd.read_csv(file, sep="\t").sample(frac=frac, random_state=42)
