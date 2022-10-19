@@ -1,11 +1,9 @@
-fakereddit_net
-==============================
+# fakereddit_net
 
 Neural Networks for[*r/Fakeddit* multimodal benchmark dataset](https://fakeddit.netlify.app/) by Kai Nakamura, Sharon Levy, and William Yang Wang.
  
 
-Getting started
-------------
+## Getting started
 
 Clone repository:
 ```
@@ -23,6 +21,8 @@ Install dependencies:
 make requirements
 ```
 
+### Download images
+
 Download train, test and validate TSV files from [multimodal_only_samples](https://drive.google.com/drive/folders/1DuH0YaEox08ZwzZDpRMOaFpMCeRyxiEF) and a save in `data/raw`.
 
 Download images:
@@ -35,8 +35,7 @@ To download more images, set the sample rate variable `FRAC`. Be sure to delete 
 make images FRAC=0.10
 ```
 
-Project Organization
-------------
+## Project Organization
 
     ├── LICENSE
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
